@@ -1,0 +1,28 @@
+#include<stdio.h>
+
+typedef struct{
+int value;
+int index;
+}card;
+
+int compare(const void*a,const void*b){
+return(((card*)a)->value - ((card*)b)->value);
+
+}
+int main()
+{
+int i,n;
+
+scanf("%d",&n);
+card a[n+1];
+for(i=0;i<n;i++){
+scanf("%d",&a[i].value);
+a[i].index=i+1;
+}
+qsort(a,n,sizeof(card),compare);
+
+for(i=0;i<n/2;i++){
+    printf("%d %d\n",a[i].index,a[n-1-i].index);
+}
+
+}
