@@ -1,0 +1,11 @@
+\\comparing two integeres in array and sort it:
+
+int compareIntegers(const void *a, const void *b) {
+    return *(int *)a - *(int *)b;
+}
+
+\\comparing strings in array
+int compareChars(const void *a, const void *b) {
+    return (*(const char *)a - *(const char *)b);
+}
+
